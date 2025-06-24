@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon Product Scraper",
+  "version": "1.0",
+  "description": "Scrapes product details and uploads local images.",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": ["http://localhost:3000/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "evidence.jpeg"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.amazon.com/*", "*://www.amazon.in/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

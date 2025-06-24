@@ -1,0 +1,21 @@
+*/node_modules
+*/build
+*/npm-debug.log
+*/.env
+*/.DS_Store
+*/__pycache__
+*/.jpg
+*.jpg
+*/uploads
+*.ply
+
+# models 
+**/*.onnx
+**/*.pt
+
+
+!Background.jpg
+!Object.jpg
+
+# !Backup.ply
+# !threed-render/public/models/*.ply
