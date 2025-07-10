@@ -6,38 +6,48 @@
     <link rel="stylesheet" href="popup.css" />
   </head>
   <body>
-    <div class="success-checkmark">
-      <div id="initialContent">
-        <h2>Want to view it in 3D??</h2>
-        <p style="font-size: 14px">Well we can help you out.</p>
-        <h3 style="font-size: 14px; margin-bottom: 12px">
-          Upload the environment where you want to view it here.
-        </h3>
-        <form id="uploadForm">
+    <div id="initialContent">
+      <h2 class="header">Want to view it in 3D??</h2>
+      <p class="subheader">Well we can help you out.</p>
+      <p class="instruction">
+        Upload the environment where you want to view it here.
+      </p>
+      <form id="uploadForm">
+        <div class="room-image-upload">
+          <label for="roomImageUploadInput" class="custom-uploader">
+            Select Room Image
+          </label>
           <input
             type="file"
-            id="environment"
+            id="roomImageUploadInput"
+            style="display: none"
             name="filename"
             accept="image/*"
           />
-          <input type="submit" value="Upload" class="submit-btn" />
-        </form>
-      </div>
-      <div id="processingContent" style="display: none">
-        <h2>Generating 3D Image</h2>
-        <p>Please wait while we process your environment...</p>
-        <div class="loading-spinner"></div>
-      </div>
-      <div id="successContent" style="display: none">
-        <h2>3D Image Generated!</h2>
-        <p>Your environment has been successfully processed.</p>
-        <div class="success-checkmark"></div>
-        <!-- <a href="http://localhost:8080/output" target="_blank">
+        </div>
+        <div class="room-image-upload">
+          <input
+            type="submit"
+            value="Upload"
+            class="submit-btn view-model-btn"
+          />
+        </div>
+      </form>
+    </div>
+    <div id="processingContent" style="display: none">
+      <h2>Generating 3D Image</h2>
+      <p>Please wait while we process your environment...</p>
+      <div class="loading-spinner"></div>
+    </div>
+    <div id="successContent" style="display: none">
+      <h2>3D Image Generated!</h2>
+      <p>Your environment has been successfully processed.</p>
+      <div class="success-checkmark"></div>
+      <!-- <a href="http://localhost:8080/output" target="_blank">
           <button id="viewModelBtn" class="view-model-btn">
             Click here to view your 3D model in your environment
           </button>
         </a> -->
-      </div>
     </div>
   </body>
 </html>

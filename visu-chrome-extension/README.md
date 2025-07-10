@@ -1,1 +1,1 @@
-# ChromeExtension
+# Visu Chrome Extension
